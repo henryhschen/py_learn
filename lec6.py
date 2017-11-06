@@ -4,6 +4,7 @@ import torch
 from torch.autograd import Variable
 import torch.nn.functional as F
 
+torch.manual_seed(8)
 x_data = Variable(torch.Tensor([[1.0], [2.0], [3.0], [4.0]]))
 y_data = Variable(torch.Tensor([[0], [0], [1], [1]]))
 
