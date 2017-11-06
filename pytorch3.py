@@ -43,16 +43,20 @@ print(net)
 
 params = list(net.parameters())
 print(len(params))
-print(params[0].size())  # conv1's .weight
-
+#print(params)
+#print(params[0].size())  # conv1's .weight
+for p in params:
+	print(p.size())
 
 input = Variable(torch.rand(1,1,32,32))
+print("\n",input.size())
 out = net(input)
 print(out)
+print(out.size())
 
 net.zero_grad()
 out.backward(torch.randn(1, 10))
-
+print(input.grad)
 
 
 

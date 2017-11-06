@@ -4,16 +4,16 @@ import torch
 from torch.autograd import Variable
 
 x = Variable(torch.ones(2, 2), requires_grad=True)
-print(x)
+print("X Variable with requires_grad=True", x)
 
 y = x+2
-print(y)
+print("y=x+2\n", y)
 
-print(y.creator)
+print("y creator\n", y.creator)
 
 z = y * y * 3
 out = z.mean()
-print(z, out)
+print("z = y*y*3\n", z, "Mean of z", out)
 
 out.backward()
 print(x.grad)

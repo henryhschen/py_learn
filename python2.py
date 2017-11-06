@@ -1,8 +1,5 @@
 #!/usr/local/bin/python3.6
 
-#print("123")
-
-
 import sys;
 
 # 1
