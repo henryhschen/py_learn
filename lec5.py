@@ -2,6 +2,7 @@
 
 import torch
 from torch.autograd import Variable
+import matplotlib.pyplot as plt
 
 torch.manual_seed(8)
 x_data = Variable(torch.Tensor([[1.0], [2.0], [3.0]]))
@@ -31,3 +32,4 @@ for epoch in range(500):
 
 hour_var = Variable(torch.Tensor([[4.0]]))
 print("predict (after training)", model.forward(hour_var).data[0][0])
+
